@@ -113,11 +113,12 @@ function getBookmarkDetails(url, title) {
     if (i > 0) {
       bookmarkDirectories[i].previous = bookmarkDirectories[i - 1];
     }
-    else if (i < directories.length - 1) {
+    if (i < directories.length - 1) {
       bookmarkDirectories[i].next = bookmarkDirectories[i + 1];
     }
   }
 
+  console.log(bookmarkDirectories);
   return bookmarkDetails(url, name, bookmarkDirectories);
 }
 
