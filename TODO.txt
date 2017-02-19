@@ -7,3 +7,4 @@ To tell if a part is word or not, to get rid of id's in directories and stuff.
 To add mappings in terms of "this site should go to this folder".
 To add a popup, allowing user to configure some "things".
 To add an option that would override the default AddBookmark of Chrome; via listeners.
+Change the createBookmarkTree function so that, for the very first directory, it would look at mappings (after it is implemented), then it would look at other directories, if there is another directory with that exact name (the first directory's name), than we would use the existing one instead. This is because, if the user manually moved our previous folder, we wouldn't have to listen move events. This "thing" may be configurable for either web sites or globally.
