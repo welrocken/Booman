@@ -16,7 +16,7 @@ function splitString(value, seperator, removeEmptyEntries) {
     return [];
   }
 
-  if (typeof(value) !== "string") {
+  if (typeof(seperator) !== "string") {
     return [];
   }
   
