@@ -5,4 +5,5 @@ A better way to tell what is an extension and what is not.
 toUpperCamelCase to seperate words; either through seperators (e.g. ".", ",", " ", "_", "-") or via some dictionary or any other smart solution. And would make all the words UpperCamelCase.
 To tell if a part is word or not, to get rid of id's in directories and stuff.
 To add mappings in terms of "this site should go to this folder".
-Get title from the actual title of the page.
+To add a popup, allowing user to configure some "things".
+To add an option that would override the default AddBookmark of Chrome; via listeners.
