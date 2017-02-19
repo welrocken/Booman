@@ -15,7 +15,6 @@ function getCurrentTabInformation(callback) {
 }
 
 function createBookmarkTree(bookmarkDetails, current, parentId) {
-  console.log(bookmarkDetails);
   current = typeof current === "undefined" ? 
     bookmarkDetails.directories[0] :
     current;
@@ -29,13 +28,10 @@ function createBookmarkTree(bookmarkDetails, current, parentId) {
       "parentId": parentId
     };
       
-    console.log("bookmark created");
-
     chrome.bookmarks.create(bookmark);
     return;
   }
 
-  console.log(current.name);
   chrome.bookmarks.search(current.name, function(results) {
     var i, exists, bookmark;
 
@@ -57,8 +53,6 @@ function createBookmarkTree(bookmarkDetails, current, parentId) {
         bookmark.parentId = parentId;
       }
   
-      console.log("directory created");
-    
       chrome.bookmarks.create(bookmark, function(result) {
           createBookmarkTree(bookmarkDetails, current.next, result.id);
         });
