@@ -118,7 +118,6 @@ function getBookmarkDetails(url, title) {
     }
   }
 
-  console.log(bookmarkDirectories);
   return bookmarkDetails(url, name, bookmarkDirectories);
 }
 
